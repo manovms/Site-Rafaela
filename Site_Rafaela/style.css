@@ -1,0 +1,291 @@
+/* Variáveis de Cores (Paleta Clean, Feminina e Séria) */
+:root {
+    --cor-fundo: #FBF9F6; /* Off-white levemente quente */
+    --cor-primaria: #6B8E7B; /* Verde sálvia (combina com o fundo da foto 2) */
+    --cor-primaria-escura: #547061;
+    --cor-secundaria: #E6D5C9; /* Nude rosado elegante */
+    --cor-texto: #333333;
+    --cor-texto-claro: #666666;
+    --fonte-titulos: 'Playfair Display', serif;
+    --fonte-textos: 'Montserrat', sans-serif;
+}
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-textos);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Tipografia */
+h1, h2, h3 {
+    font-family: var(--fonte-titulos);
+    font-weight: 600;
+}
+
+/* Header */
+header {
+    background-color: var(--cor-fundo);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--fonte-titulos);
+    font-size: 1.5rem;
+    color: var(--cor-primaria-escura);
+    font-weight: 600;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--cor-texto);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--cor-primaria);
+}
+
+.btn-nav {
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+
+.btn-nav:hover {
+    background-color: var(--cor-primaria-escura);
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    padding: 80px 0;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    color: var(--cor-primaria-escura);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    color: var(--cor-texto-claro);
+    margin-bottom: 40px;
+}
+
+.btn-primary, .btn-whatsapp {
+    display: inline-block;
+    background-color: var(--cor-primaria);
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.btn-primary:hover, .btn-whatsapp:hover {
+    background-color: var(--cor-primaria-escura);
+}
+
+.hero-image {
+    flex: 1;
+    text-align: right;
+}
+
+.hero-image img {
+    max-width: 90%;
+    border-radius: 20px 20px 20px 100px; /* Borda orgânica e feminina */
+    box-shadow: 15px 15px 0px var(--cor-secundaria);
+}
+
+/* Sobre Mim (Atualizado para imagem menos exagerada) */
+.sobre {
+    background-color: white;
+    padding: 80px 0;
+}
+
+.sobre-container {
+    display: flex;
+    align-items: center; /* Alinha o texto e a imagem verticalmente */
+    gap: 60px;
+}
+
+/* MODIFICAÇÃO: Diminuindo a coluna da imagem */
+.sobre-image {
+    /* flex: 1; <- O original era dominante, mudamos o ratio */
+    flex: 2;      /* Menor proporção em relação ao texto */
+    max-width: 380px; /* Define um tamanho máximo absoluto (menos exagerado) */
+    margin: 0 auto; /* Garante que a imagem fique centralizada na coluna se houver espaço */
+}
+
+.sobre-image img {
+    max-width: 100%; /* Ajusta-se ao container .sobre-image */
+    border-radius: 100px 20px 20px 20px;
+    box-shadow: -15px 15px 0px var(--cor-secundaria);
+}
+
+/* MODIFICAÇÃO: Dando mais destaque ao texto */
+.sobre-text {
+    /* flex: 1; <- O original era igual à imagem */
+    flex: 3;      /* Ganha mais espaço horizontal */
+}
+
+.sobre-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--cor-primaria-escura);
+}
+
+.sobre-text p {
+    margin-bottom: 15px;
+    color: var(--cor-texto-claro);
+    font-size: 1.05rem;
+}
+/* Serviços */
+.servicos {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: var(--cor-primaria-escura);
+    margin-bottom: 50px;
+}
+
+.cards-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.card {
+    background-color: white;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    flex: 1;
+    transition: transform 0.3s;
+    border-top: 5px solid var(--cor-secundaria);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--cor-primaria-escura);
+}
+
+.card p {
+    color: var(--cor-texto-claro);
+    font-size: 0.95rem;
+}
+
+/* Footer / Contato */
+footer {
+    background-color: var(--cor-primaria-escura);
+    color: white;
+    text-align: center;
+    padding: 60px 0 20px;
+}
+
+.footer-info h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.footer-info p {
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.btn-whatsapp {
+    background-color: #25D366; /* Verde do WhatsApp */
+}
+
+.btn-whatsapp:hover {
+    background-color: #1EBE5D;
+}
+
+.footer-copy {
+    margin-top: 60px;
+    font-size: 0.8rem;
+    opacity: 0.7;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
+}
+
+/* Responsividade (Mobile) */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .hero-container, .sobre-container, .cards-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-image img, .sobre-image img {
+        border-radius: 20px; /* Simplifica as bordas no mobile */
+        box-shadow: 10px 10px 0px var(--cor-secundaria);
+        margin-top: 30px;
+    }
+}
